@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Happy Birthday</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f8cdda, #f6e7d7);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        max-width: 800px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .birthday {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    h1 {
+        color: #d6336c;
+        margin-top: 1rem;
+    }
+
+    p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .muted {
+        color: #888;
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+
+    .video {
+        margin-top: 2rem;
+    }
+
+    video {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    audio {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    button {
+        margin-top: 1.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        background-color: #d6336c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #c02558;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="birthday" src="birthday_image.png" alt="Birthday Image" />
+    <h1>Happy Birthday!</h1>
+
+    <p>สุขสันต์วันเกิดนะ :) ขอให้เธอมีความสุขมากๆ ในทุกๆ วัน<br>
+    เจอแต่เรื่องดีๆ ผู้คนดีๆ และโอกาสดีๆ เข้ามาในชีวิตเสมอ<br>
+    ขอให้ปีนี้และทุกปีต่อจากนี้เต็มไปด้วยความสุข ความสบายใจ และเสียงหัวเราะ<br>
+    ยิ้มเยอะๆ นะ เพราะฉันชอบรอยยิ้มของเธอที่สุดเลย<br>
+    ฉันจะอยู่ข้างๆเธอเสมอ รักน้าา 💖</p>
+
+    <button id="smileButton">คลิกเพื่อส่งยิ้ม 😊</button>
+
+    <p id="smileMessage" style="display: none; margin-top: 1rem; font-size: 1.2rem; color: #d6336c;">
+      😊 ยิ้มของเธอทำให้โลกสดใสขึ้นทุกวันเลยนะไอเบิฟยู!
+    </p>
+
+    <div class="video">
+      <video controls autoplay muted loop>
+        <source src="happy (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <audio controls autoplay loop>
+      <source src="Lost Jigsaw feat Upim LANDOKMAI.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="muted">Enjoy your special day!</p>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const smileButton = document.getElementById("smileButton");
+      const smileMessage = document.getElementById("smileMessage");
+
+      smileButton.addEventListener("click", function () {
+        smileMessage.style.display = "block";
+        smileButton.disabled = true;
+        smileButton.textContent = "ส่งยิ้มแล้ว 😊";
+      });
+    });
+  </script>
+</body>
+</html>
